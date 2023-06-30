@@ -1,24 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CustomTableView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mZ6-zB-Cq7">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="foodCell" id="ey8-3l-Bf2" customClass="FoodTableViewCell" customModule="CustomTableView" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ey8-3l-Bf2" id="E3D-hG-FiD">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="izgarasomon" translatesAutoresizingMaskIntoConstraints="NO" id="eQd-Km-t2U">
+                                                    <rect key="frame" x="10" y="0.0" width="100" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="100" id="86O-9t-lAV"/>
+                                                        <constraint firstAttribute="width" constant="100" id="h2e-gh-xmn"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Izgara Somon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jsj-6l-lTV">
+                                                    <rect key="frame" x="136" y="11" width="120" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24 TL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bnw-hx-b3M">
+                                                    <rect key="frame" x="136" y="50" width="51" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <color key="textColor" systemColor="linkColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLW-T4-gKK">
+                                                    <rect key="frame" x="267" y="32.666666666666671" width="106" height="34.666666666666671"/>
+                                                    <color key="tintColor" systemColor="systemRedColor"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="Sipariş Ver"/>
+                                                    <connections>
+                                                        <action selector="orderButton:" destination="ey8-3l-Bf2" eventType="touchUpInside" id="Zcz-ss-7JD"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="eQd-Km-t2U" firstAttribute="top" secondItem="E3D-hG-FiD" secondAttribute="top" id="UgB-s7-Xer"/>
+                                                <constraint firstItem="bLW-T4-gKK" firstAttribute="trailing" secondItem="E3D-hG-FiD" secondAttribute="trailingMargin" id="Vnr-Rb-G3J"/>
+                                                <constraint firstItem="bLW-T4-gKK" firstAttribute="top" secondItem="E3D-hG-FiD" secondAttribute="topMargin" constant="21.670000000000002" id="ac1-Wd-x5v"/>
+                                                <constraint firstItem="Jsj-6l-lTV" firstAttribute="top" secondItem="E3D-hG-FiD" secondAttribute="topMargin" id="qf2-K4-LRw"/>
+                                                <constraint firstAttribute="bottom" secondItem="eQd-Km-t2U" secondAttribute="bottom" id="rDM-kb-HhR"/>
+                                                <constraint firstItem="Jsj-6l-lTV" firstAttribute="leading" secondItem="eQd-Km-t2U" secondAttribute="trailing" constant="26" id="tm3-BB-gqs"/>
+                                                <constraint firstItem="Bnw-hx-b3M" firstAttribute="top" secondItem="Jsj-6l-lTV" secondAttribute="bottom" constant="15" id="toe-OJ-9No"/>
+                                                <constraint firstItem="Bnw-hx-b3M" firstAttribute="leading" secondItem="eQd-Km-t2U" secondAttribute="trailing" constant="26" id="uPO-4J-RYz"/>
+                                                <constraint firstItem="bLW-T4-gKK" firstAttribute="centerY" secondItem="E3D-hG-FiD" secondAttribute="centerY" id="vTV-pw-aZy"/>
+                                                <constraint firstItem="eQd-Km-t2U" firstAttribute="leading" secondItem="E3D-hG-FiD" secondAttribute="leading" constant="10" id="x5Q-WF-CMN"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="foodImageView" destination="eQd-Km-t2U" id="XN6-ea-Pbp"/>
+                                            <outlet property="foodNameLabel" destination="Jsj-6l-lTV" id="wqO-F5-xlk"/>
+                                            <outlet property="foodPriceLabel" destination="Bnw-hx-b3M" id="G0x-Vg-zAA"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mZ6-zB-Cq7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="N1y-xo-jri"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mZ6-zB-Cq7" secondAttribute="bottom" id="QSQ-c8-jkx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mZ6-zB-Cq7" secondAttribute="trailing" id="Z71-dz-Q0B"/>
+                            <constraint firstItem="mZ6-zB-Cq7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dEa-1Q-7tn"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="foodTableView" destination="mZ6-zB-Cq7" id="MGO-0R-1b2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="67.938931297709928" y="-27.464788732394368"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="izgarasomon" width="256" height="256"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
